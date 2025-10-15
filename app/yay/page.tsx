@@ -1,5 +1,6 @@
 import * as React from "react"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
+import { Button } from "@/registry/yay/ui/button"
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 
@@ -20,10 +21,13 @@ export default function Home() {
             </h2>
             <OpenInV0Button name="hello-world" className="w-fit" />
           </div>
-          <div className="relative flex min-h-[400px] items-center justify-center">
-            <button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-sm p-2 px-4 transition-colors">
-              Hello
-            </button>
+          <div className="relative flex min-h-[400px] items-center justify-center gap-2">
+            <Button>Default</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="ghost">Ghost</Button>
+            <Button variant="link">Link</Button>
+            <Button variant="destructive">Destructive</Button>
           </div>
         </div>
       </main>
