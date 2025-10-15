@@ -9,58 +9,61 @@ import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example
 
 export default function Home() {
   return (
-    <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
+    <div className="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-8">
       <header className="flex flex-col gap-1">
-        <h1 className="text-3xl font-bold tracking-tight">Custom Registry</h1>
+        <h1 className="text-3xl font-bold tracking-tight">
+          Shadcn Prototyping Area
+        </h1>
         <p className="text-muted-foreground">
-          A custom registry for distributing code using shadcn.
+          Example components from the New York registry for prototyping full
+          screens using the default shadcn theme.
         </p>
       </header>
-      <main className="flex flex-col flex-1 gap-8">
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+      <main className="flex flex-1 flex-col gap-8">
+        <div className="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
+            <h2 className="text-muted-foreground text-sm sm:pl-3">
               A simple hello world component
             </h2>
             <OpenInV0Button name="hello-world" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="relative flex min-h-[400px] items-center justify-center">
             <HelloWorld />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
+            <h2 className="text-muted-foreground text-sm sm:pl-3">
               A contact form with Zod validation.
             </h2>
             <OpenInV0Button name="example-form" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[500px] relative">
+          <div className="relative flex min-h-[500px] items-center justify-center">
             <ExampleForm />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
+            <h2 className="text-muted-foreground text-sm sm:pl-3">
               A complex component showing hooks, libs and components.
             </h2>
             <OpenInV0Button name="complex-component" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="relative flex min-h-[400px] items-center justify-center">
             <PokemonPage />
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+        <div className="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
+            <h2 className="text-muted-foreground text-sm sm:pl-3">
               A login form with a CSS file.
             </h2>
             <OpenInV0Button name="example-with-css" className="w-fit" />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
+          <div className="relative flex min-h-[400px] items-center justify-center">
             <ExampleCard />
           </div>
         </div>
