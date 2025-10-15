@@ -7,9 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "registry:shadcn": "shadcn build --output ./public/r/shadcn ./registry-shadcn.json",
-    "registry:yay": "shadcn build --output ./public/r/yay ./registry-yay.json",
-    "registry:build": "pnpm run registry:shadcn && pnpm run registry:yay"
+    "registry:build": "shadcn build --output ./public/r/yay ./registry-yay.json"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
