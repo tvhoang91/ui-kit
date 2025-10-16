@@ -22,15 +22,8 @@ export default function AdvancedBookingFeaturesPage() {
         </BreadcrumbItem>
       </LayoutHeader>
       <LayoutMain>
-        <div className="relative flex min-h-[300px] flex-col gap-4 rounded-lg border p-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-muted-foreground text-sm sm:pl-3">
-              Advanced Booking Features
-            </h2>
-          </div>
-          <div className="relative flex min-h-[200px] items-center justify-center gap-2">
-            <AdvancedBookingFeatures />
-          </div>
+        <div className="relative my-4 flex min-h-[200px] items-center justify-center gap-2">
+          <AdvancedBookingFeatures />
         </div>
       </LayoutMain>
     </>

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Component, SquareTerminal } from "lucide-react"
+import { Component, LayoutPanelLeft, Shapes } from "lucide-react"
 
 import { BrandSwitcher } from "@/components/layout/brand-switcher"
 import {
@@ -33,11 +33,10 @@ export function ShadcnSidebar({
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Prototype</SidebarGroupLabel>
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton tooltip="Components">
-                <SquareTerminal className="size-5" />
+                <LayoutPanelLeft className="size-5" />
                 <span>Prototype</span>
               </SidebarMenuButton>
               <SidebarMenuSub>
@@ -55,7 +54,7 @@ export function ShadcnSidebar({
 
             <SidebarMenuItem>
               <SidebarMenuButton tooltip="Components">
-                <SquareTerminal className="size-5" />
+                <Shapes className="size-5" />
                 <span>Blocks</span>
               </SidebarMenuButton>
               <SidebarMenuSub>
