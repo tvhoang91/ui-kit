@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { LayoutDashboard } from "lucide-react"
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 import "./shadcn.css"
+import { ShadcnSidebar } from "./_components/shadcn-sidebar"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,32 +14,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <div className="relative flex min-h-screen flex-col">
-      <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
-        <div className="mx-auto flex h-14 items-center px-4">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <LayoutDashboard className="h-6 w-6" />
-            <span className="hidden font-bold sm:inline-block">
-              UI Kit Registry
-            </span>
-          </Link>
-          <nav className="flex items-center gap-6 text-sm">
-            <Link
-              href="/shadcn"
-              className="hover:text-foreground/80 text-foreground font-medium transition-colors"
-            >
-              Shadcn
-            </Link>
-            <Link
-              href="/yay"
-              className="hover:text-foreground/80 text-foreground/60 transition-colors"
-            >
-              Yay
-            </Link>
-          </nav>
-        </div>
-      </header>
-      <main className="flex-1">{children}</main>
-    </div>
+    <SidebarProvider>
+      <ShadcnSidebar />
+      <SidebarInset>{children}</SidebarInset>
+    </SidebarProvider>
   )
 }
