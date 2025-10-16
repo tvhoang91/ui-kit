@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-uncontrolled",
+  "type": "registry:hook",
+  "title": "Uncontrolled state hook",
+  "files": [
+    {
+      "path": "registry/yay/hooks/use-uncontrolled.ts",
+      "content": "import { useState } from \"react\"\n\n/**\n * A hook that manages a state which can be either controlled or uncontrolled. Copy from mantine hooks.\n * Use this for Custom Input components follow Shadcn UI pattern.\n * Use this hooks to prepare for future migration from Antd Form, ahooks => react-hook-form, react-use\n */\n\nexport interface UseUncontrolledOptions<T> {\n  /** Value for controlled state */\n  value?: T\n\n  /** Initial value for uncontrolled state */\n  defaultValue?: T\n\n  /** Final value for uncontrolled state when value and defaultValue are not provided */\n  finalValue?: T\n\n  /** Controlled state onChange handler */\n  onChange?: (value: T, ...payload: any[]) => void\n}\n\nexport type UseUncontrolledReturnValue<T> = [\n  /** Current value */\n  T,\n\n  /** Handler to update the state, passes `value` and `payload` to `onChange` */\n  (value: T, ...payload: any[]) => void,\n\n  /** True if the state is controlled, false if uncontrolled */\n  boolean,\n]\n\nexport function useUncontrolled<T>({\n  value,\n  defaultValue,\n  finalValue,\n  onChange = () => {},\n}: UseUncontrolledOptions<T>): UseUncontrolledReturnValue<T> {\n  const [uncontrolledValue, setUncontrolledValue] = useState(\n    defaultValue !== undefined ? defaultValue : finalValue\n  )\n\n  const handleUncontrolledChange = (val: T, ...payload: any[]) => {\n    setUncontrolledValue(val)\n    onChange?.(val, ...payload)\n  }\n\n  if (value !== undefined) {\n    return [value as T, onChange, true]\n  }\n\n  return [uncontrolledValue as T, handleUncontrolledChange, false]\n}\n",
+      "type": "registry:hook"
+    }
+  ]
+}

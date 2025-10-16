@@ -5,20 +5,50 @@
   "items": [
     {
       "name": "color-picker",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Color Picker",
-      "description": "A color picker component using WordPress components.",
-      "registryDependencies": ["button"],
+      "registryDependencies": ["button", "popover", "use-uncontrolled"],
       "dependencies": ["@wordpress/components"],
       "files": [
         {
           "path": "registry/yay/ui/color-picker/color-picker.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         },
         {
           "path": "registry/yay/ui/color-picker/color-picker.css",
           "type": "registry:style"
-        },
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "dependencies": ["@radix-ui/react-slot"],
+      "files": [
+        {
+          "path": "registry/yay/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "dependencies": ["@radix-ui/react-popover"],
+      "files": [
+        {
+          "path": "registry/yay/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "use-uncontrolled",
+      "type": "registry:hook",
+      "title": "Uncontrolled state hook",
+      "files": [
         {
           "path": "registry/yay/hooks/use-uncontrolled.ts",
           "type": "registry:hook"
