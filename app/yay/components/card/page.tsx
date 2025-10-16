@@ -19,8 +19,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/registry/yay/ui/card"
-// This page displays items from the custom registry.
-// You are free to implement this with your own design as needed.
 
 export default function CardPage() {
   return (

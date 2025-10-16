@@ -33,20 +33,41 @@ export function ShadcnSidebar({
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
+          <SidebarGroupLabel>Prototype</SidebarGroupLabel>
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton tooltip="Components">
                 <SquareTerminal className="size-5" />
-                <span>Get Started</span>
+                <span>Prototype</span>
               </SidebarMenuButton>
               <SidebarMenuSub>
-                <SidebarMenuSubItem>
-                  <SidebarMenuSubButton asChild>
-                    <a href="/shadcn" className="w-full">
-                      <span>Blocks Example</span>
-                    </a>
-                  </SidebarMenuSubButton>
-                </SidebarMenuSubItem>
+                {prototypes.map((component) => (
+                  <SidebarMenuSubItem key={component.href}>
+                    <SidebarMenuSubButton asChild>
+                      <a href={component.href} className="w-full">
+                        <span>{component.title}</span>
+                      </a>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                ))}
+              </SidebarMenuSub>
+            </SidebarMenuItem>
+
+            <SidebarMenuItem>
+              <SidebarMenuButton tooltip="Components">
+                <SquareTerminal className="size-5" />
+                <span>Blocks</span>
+              </SidebarMenuButton>
+              <SidebarMenuSub>
+                {blocks.map((component) => (
+                  <SidebarMenuSubItem key={component.href}>
+                    <SidebarMenuSubButton asChild>
+                      <a href={component.href} className="w-full">
+                        <span>{component.title}</span>
+                      </a>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                ))}
               </SidebarMenuSub>
             </SidebarMenuItem>
           </SidebarMenu>
@@ -56,3 +77,21 @@ export function ShadcnSidebar({
     </Sidebar>
   )
 }
+
+const prototypes = [
+  {
+    title: "Booking Features",
+    href: "/shadcn/prototype/advanced-booking-features",
+  },
+]
+
+const blocks = [
+  {
+    title: "Preferences Form",
+    href: "/shadcn/blocks/preferences-form",
+  },
+  {
+    title: "No Projects Yet",
+    href: "/shadcn/blocks/no-projects-yet",
+  },
+]

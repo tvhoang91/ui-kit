@@ -8,8 +8,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-// This page displays items from the custom registry.
-// You are free to implement this with your own design as needed.
 
 export default function ButtonPage() {
   return (
