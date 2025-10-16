@@ -41,10 +41,9 @@ This codebase maintains a single component registry (Yay brand) with a separate 
 
 2. **Registry Source Files**:
    - `registry/yay/` - Contains Yay brand UI kit components
-   - `registry/new-york/` - Example components for reference (not part of Yay registry)
 
 3. **Next.js Routes**:
-   - `/shadcn` - **Prototyping area** for building full screens using default shadcn theme (app/shadcn/)
+   - `/shadcn` - **Prototyping area** for building full screens using default shadcn theme and components from `components/ui/`
    - `/yay` - Preview page for Yay brand registry components (app/yay/)
    - Each route has its own layout with separate CSS theme files:
      - `app/shadcn/shadcn.css` - Default shadcn theme
@@ -104,9 +103,11 @@ Example item types:
 The `/shadcn` route is a dedicated prototyping area for building full screens and pages:
 - **NOT part of the registry** - this is for prototyping only
 - Uses default shadcn theme for consistency
-- Build prototype screens directly in `app/shadcn/`
-- Can use any shadcn components via `npx shadcn@latest add [component]`
-- Ideal for testing layouts, flows, and full page compositions before extracting components into the Yay registry
+- Uses shadcn components directly from `components/ui/`
+- Build prototype screens in `app/shadcn/prototype/[name]/`
+- Can add more shadcn components via `npx shadcn@latest add [component]`
+- Check `app/shadcn/blocks/` for example patterns and reference implementations
+- Prototypes have NO connection to the Yay UI Kit registry
 
 ## Important Notes
 
